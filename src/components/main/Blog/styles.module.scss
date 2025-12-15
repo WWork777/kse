@@ -1,0 +1,108 @@
+.blogSection {
+  background-color: white;
+  padding: 50px 5%;
+}
+
+.blogHeader {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+}
+
+.blogHeaderSpan {
+  font-size: 22px;
+  font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
+.blogHeaderH2 {
+  font-size: 56px;
+  font-weight: 700;
+  max-width: 600px;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    text-align: left;
+  }
+}
+
+.blogContent {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; // на случай, если карточки переходят на следующую строку
+}
+
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: calc(25% - 22.5px); // 4 карточки в ряд с учетом gap
+  transition: transform 0.3s ease;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  span {
+    display: block;
+  }
+
+  // сдвиг нечетных карточек выше (по желанию можно оставить ноль)
+  &:nth-child(odd) {
+    margin-top: 0;
+  }
+}
+
+// адаптив
+@media (max-width: 1200px) {
+  .blogCard {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .blogCard {
+    width: 100%;
+  }
+}
+
+.blogCardSpanTag {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
+}
+
+.blogCardSpanTitle {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: Poppins, sans-serif;
+}
+
+.blogCardSpanDate {
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+  font-family: Poppins, sans-serif;
+}

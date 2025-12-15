@@ -1,0 +1,399 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.459); // при скролле
+    backdrop-filter: blur(10px);
+  }
+
+  background-color: transparent;
+
+  .phoneNumber {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  .logo {
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #03bfff, #00ffd1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+      margin: 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .desktopNav {
+    ul {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li a {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        padding: 0.5rem 0;
+        transition: color 0.3s ease;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: #03bfff;
+          transition: width 0.3s ease;
+          border-radius: 1px;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .desktopPhone {
+    span {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #03bfff;
+      padding: 0.75rem 1.5rem;
+      background: rgba(3, 191, 255, 0.1);
+      border-radius: 25px;
+      border: 1px solid rgba(3, 191, 255, 0.3);
+      transition: all 0.3s ease;
+      display: inline-block;
+
+      &:hover {
+        background: rgba(3, 191, 255, 0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(3, 191, 255, 0.2);
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    z-index: 1002;
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      border-radius: 3px;
+      transition: 0.3s ease;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+        // background: #03bfff;
+      }
+      span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+        // background: #03bfff;
+      }
+    }
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.932);
+    backdrop-filter: blur(15px);
+    z-index: 1001;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+
+    &.open {
+      left: 0;
+    }
+
+    .mobileContent {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 120px 5% 60px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .mobileHeader {
+      text-align: center;
+      margin-bottom: 3rem;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        background: linear-gradient(45deg, #03bfff, #00ffd1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin: 0;
+      }
+    }
+
+    .mobileNav {
+      flex-grow: 1;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        li {
+          text-align: center;
+
+          a {
+            font-size: 3rem;
+            font-weight: 400;
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+
+            // &:hover {
+            //   color: #03bfff;
+            //   transform: translateX(10px);
+            // }
+
+            // &::before {
+            //   content: "";
+            //   position: absolute;
+            //   left: -20px;
+            //   top: 50%;
+            //   transform: translateY(-50%);
+            //   width: 8px;
+            //   height: 8px;
+            //   background: #03bfff;
+            //   border-radius: 50%;
+            //   opacity: 0;
+            //   transition: opacity 0.3s ease;
+            // }
+
+            // &:hover::before {
+            //   opacity: 1;
+            // }
+          }
+        }
+      }
+    }
+
+    .mobilePhone {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border: 1px solid rgba(3, 191, 255, 0.2);
+      margin-top: auto;
+      backdrop-filter: blur(10px);
+
+      .phoneIcon {
+        width: 48px;
+        height: 48px;
+        background: rgba(3, 191, 255, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .phoneInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        .phoneLabel {
+          font-size: 0.875rem;
+          color: rgba(255, 255, 255, 0.7);
+          font-weight: 400;
+        }
+
+        .phoneNumber {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #03bfff;
+          text-decoration: none;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #00ffd1;
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    // .closeButton {
+    //   position: absolute;
+    //   top: 30px;
+    //   right: 5%;
+    //   background: rgba(255, 255, 255, 0.1);
+    //   border: none;
+    //   width: 48px;
+    //   height: 48px;
+    //   border-radius: 50%;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   cursor: pointer;
+    //   transition: all 0.3s ease;
+
+    //   &:hover {
+    //     background: rgba(3, 191, 255, 0.2);
+    //     transform: rotate(90deg);
+    //   }
+    // }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      height: 70px;
+    }
+
+    .desktopNav ul {
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      height: 70px;
+    }
+
+    .desktopNav,
+    .desktopPhone {
+      display: none;
+    }
+
+    .burger {
+      display: flex;
+    }
+
+    .logo h1 {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 20px;
+      height: 65px;
+    }
+
+    .logo h1 {
+      font-size: 1.5rem;
+    }
+
+    .burger {
+      width: 26px;
+      height: 18px;
+    }
+
+    .mobileMenu {
+      .mobileContent {
+        padding: 100px 20px 40px;
+      }
+
+      .mobileHeader h2 {
+        font-size: 2rem;
+      }
+
+      .mobileNav ul li a {
+        font-size: 2rem;
+      }
+
+      .mobilePhone {
+        padding: 1.25rem;
+
+        .phoneIcon {
+          width: 42px;
+          height: 42px;
+        }
+
+        .phoneInfo {
+          .phoneNumber {
+            font-size: 1.125rem;
+          }
+        }
+      }
+
+      .closeButton {
+        top: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .mobileNav ul li a,
+  .phoneNumber {
+    font-size: 1.5rem !important;
+  }
+}

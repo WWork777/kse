@@ -1,0 +1,238 @@
+.heroSection {
+  position: relative;
+  z-index: 2; // 🔥 ВАЖНО
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    height: 0.5px;
+    background: #ffffff21;
+    z-index: 10;
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 5%;
+  //   right: 5%;
+  //   bottom: 0px;
+  //   width: 90%;
+  //   height: 0.5px; // толщина линии
+  //   background: #ffffff49;
+  //   z-index: 4; // выше затемнения и картинки
+  // }
+
+  /* затемнение снизу */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+  }
+}
+
+/* ====== Основной контент ====== */
+.content {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-70%);
+  z-index: 2;
+  max-width: 420px;
+  color: #fff;
+
+  span {
+    color: #03bfff;
+  }
+
+  p {
+    font-size: 34px;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  button {
+    padding: 14px 32px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #03bfff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+
+    &:hover {
+      background: #0490be;
+    }
+  }
+}
+
+.bottomText {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+
+  @media (max-width: 1360px) {
+    bottom: -20px;
+  }
+
+  span {
+    font-size: 400px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+
+    @media (max-width: 1760px) {
+      font-size: 300px;
+    }
+
+    @media (max-width: 1360px) {
+      font-size: 200px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .content {
+    top: auto;
+    bottom: 100px;
+    left: 3%;
+    max-width: 100%;
+    text-align: left;
+
+    p {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    button {
+      width: 50%;
+      font-size: 18px;
+      padding: 14px 0;
+    }
+  }
+
+  .bottomText {
+    bottom: 10px;
+
+    span {
+      font-size: 120px;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    bottom: 50px;
+  }
+
+  .content p {
+    font-size: 22px;
+  }
+
+  .bottomText span {
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content p {
+    font-size: 18px;
+  }
+
+  .bottomText span {
+    font-size: 70px;
+  }
+}
+
+/* ===== Анимация для контента ===== */
+.content {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.5s;
+
+  /* убираем transform из анимации */
+  transform: translateY(-70%);
+
+  p {
+    opacity: 0;
+    animation: fadeUpText 1s ease forwards;
+    animation-delay: 0.7s;
+  }
+
+  button {
+    opacity: 0;
+    animation: fadeUpButton 1s ease forwards;
+    animation-delay: 1s;
+  }
+}
+
+.bottomText span {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(
+      calc(-70% + 30px)
+    ); /* смещаем относительно текущего */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-70%);
+  }
+}
+
+@keyframes fadeUpText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpButton {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,103 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 5%;
+
+  a,
+  span {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #f39c12; // акцентный цвет при наведении
+    }
+  }
+}
+
+.container_top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 100px;
+
+  .item {
+    flex: 1;
+    min-width: 200px; // минимальная ширина блока
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .description {
+      font-family: Poppins, sans-serif;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    p,
+    span {
+      font-size: 18px;
+      font-family: Poppins, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.61);
+    }
+
+    .socials {
+      display: flex;
+      gap: 15px;
+
+      // пример для иконок соцсетей
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #f39c12;
+          border-color: #f39c12;
+        }
+      }
+    }
+  }
+}
+
+.container_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+
+  span {
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 1200px) {
+  .container_top {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,153 @@
+.aboutSection {
+  background-color: black;
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    height: 0.5px;
+    background: #ffffff21;
+    z-index: 10;
+  }
+}
+
+.about {
+  width: 100%;
+  padding: 100px 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+
+  @media (max-width: 1700px) {
+    padding: 80px 10%;
+  }
+
+  @media (max-width: 1500px) {
+    padding: 60px 5%;
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+}
+
+.about__image {
+  flex: 1;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    height: 400px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.about__content {
+  flex: 1;
+  color: white;
+
+  .about__content__span {
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+
+  .about__content__title {
+    font-size: 52px;
+    font-weight: 700;
+    max-width: 450px;
+    margin: 20px 0;
+
+    @media (max-width: 1500px) {
+      font-size: 36px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 28px;
+    }
+  }
+  .about__content__description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #d3d3d3c9;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 50px;
+
+    @media (max-width: 1500px) {
+      font-size: 16px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+
+  .about__content__items {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+
+    @media (max-width: 1200px) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .about__content__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .about__content__item__number {
+      font-size: 66px;
+      font-weight: 700;
+      color: #ffffff;
+      position: relative;
+      padding-bottom: 10px;
+
+      @media (max-width: 1500px) {
+        font-size: 56px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 40px;
+      }
+
+      &::after {
+        position: absolute;
+        content: " ";
+        width: 100%;
+        height: 1px;
+        background: #fdfdfd62;
+        bottom: 0px;
+        left: 0;
+      }
+    }
+
+    .about__content__item__text {
+      font-size: 22px;
+      color: #ffffff;
+      line-height: 1.4;
+      padding-top: 10px;
+      @media (max-width: 1500px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
