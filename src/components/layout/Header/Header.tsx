@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,7 +25,9 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">autoclean.</Link>
+          <Link href="/">
+            <Image src="/logo.png" alt="kse logo" width={75} height={50} />
+          </Link>
         </div>
 
         <nav className={styles.desktopNav}>

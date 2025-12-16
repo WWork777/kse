@@ -67,7 +67,7 @@ export default function ServicesSecond() {
           <h2>Восстановление и защита стекол и фар для вашей безопасности</h2>
           <div className={styles.headerActions}>
             <span className={styles.headerText}>
-              Хотите вернуть вашему автомобилю первоначальный блеск и
+              Хотите вернуть стеклу вашего автомобиля первоначальный блеск и
               прозрачность?
             </span>
           </div>

@@ -21,7 +21,7 @@ export default function Services() {
         <div className={styles.services__item}>
           <div className={styles.services__item__header}>
             <span>02</span>
-            <h3>ВОССТАНОВЛЕНИЕ ФАР</h3>
+            <h3>ВОССТАНОВЛЕНИЕ прозрачности ФАР</h3>
           </div>
 
           <Image

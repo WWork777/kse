@@ -11,7 +11,7 @@ export default function Hero() {
         <div className={styles.content}>
           <p>
             Сделайте ваши поездки безопаснее с помощью полировки{" "}
-            <span>и сэкономьте на замене стекла.</span>
+            <span>и сэкономьте на замене стекла</span>
           </p>
           <Link href="https://t.me/Fizik_Sergey">Запишитесь сейчас</Link>
         </div>
