@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -9,14 +10,14 @@ export default function Hero() {
 
         <div className={styles.content}>
           <p>
-            Revitalize your vehicle’s look with our premier car wash.{" "}
-            <span>We provide services that exceed expectations.</span>
+            Сделайте ваши поездки безопаснее с помощью полировки{" "}
+            <span>и сэкономьте на замене стекла.</span>
           </p>
-          <button>BOOK NOW</button>
+          <Link href="https://t.me/Fizik_Sergey">Запишитесь сейчас</Link>
         </div>
 
         <div className={styles.bottomText}>
-          <span>CAR DETAILING</span>
+          <span>полировка стекол</span>
         </div>
       </div>
     </section>

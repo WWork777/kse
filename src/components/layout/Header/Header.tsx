@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
+import Link from "next/link";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,37 +21,48 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+    <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <h1>autoclean.</h1>
+          <Link href="/">autoclean.</Link>
         </div>
 
         <nav className={styles.desktopNav}>
           <ul>
             <li>
-              <a href="#" onClick={() => setMenuOpen(false)}>
-                Home
+              <a href="/" onClick={() => setMenuOpen(false)}>
+                Главная
               </a>
             </li>
             <li>
-              <a href="#" onClick={() => setMenuOpen(false)}>
-                Services
+              <a href="/#services" onClick={() => setMenuOpen(false)}>
+                Услуги
               </a>
             </li>
             <li>
-              <a href="#" onClick={() => setMenuOpen(false)}>
-                About Us
+              <a href="/#about" onClick={() => setMenuOpen(false)}>
+                О нас
               </a>
             </li>
             <li>
-              <a href="#" onClick={() => setMenuOpen(false)}>
-                Membership
+              <a
+                href="https://t.me/Fizik_Sergey"
+                onClick={() => setMenuOpen(false)}
+              >
+                Оставить заявку
               </a>
             </li>
             <li>
-              <a href="#" onClick={() => setMenuOpen(false)}>
-                Contact
+              <a href="/#contacts" onClick={() => setMenuOpen(false)}>
+                Контакты
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+7 (923) 523-44-23"
+                onClick={() => setMenuOpen(false)}
+              >
+                +7 (923) 523-44-23
               </a>
             </li>
           </ul>
@@ -75,33 +87,36 @@ export default function Header() {
             <nav className={styles.mobileNav}>
               <ul>
                 <li>
-                  <a href="#" onClick={() => setMenuOpen(false)}>
-                    Home
+                  <a href="/" onClick={() => setMenuOpen(false)}>
+                    Главная
                   </a>
                 </li>
                 <li>
-                  <a href="#" onClick={() => setMenuOpen(false)}>
-                    Services
+                  <a href="/#services" onClick={() => setMenuOpen(false)}>
+                    Услуги
                   </a>
                 </li>
                 <li>
-                  <a href="#" onClick={() => setMenuOpen(false)}>
-                    About Us
+                  <a href="/#about" onClick={() => setMenuOpen(false)}>
+                    О нас
                   </a>
                 </li>
                 <li>
-                  <a href="#" onClick={() => setMenuOpen(false)}>
-                    Membership
+                  <a
+                    href="https://t.me/Fizik_Sergey"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Оставить заявку
                   </a>
                 </li>
                 <li>
-                  <a href="#" onClick={() => setMenuOpen(false)}>
-                    Contact
+                  <a href="/#contacts" onClick={() => setMenuOpen(false)}>
+                    Контакты
                   </a>
                 </li>
               </ul>
-              <a href="tel:+1234567890" className={styles.phoneNumber}>
-                +1 (234) 567-890
+              <a href="tel:+7 (923) 523-44-23" className={styles.phoneNumber}>
+                +7 (923) 523-44-23
               </a>
             </nav>
           </div>

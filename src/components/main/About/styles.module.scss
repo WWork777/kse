@@ -63,18 +63,18 @@
   }
 
   .about__content__title {
-    font-size: 52px;
+    font-size: 24px;
     font-weight: 700;
     max-width: 450px;
     margin: 20px 0;
 
     @media (max-width: 1500px) {
-      font-size: 36px;
+      font-size: 20px;
       max-width: 100%;
     }
 
     @media (max-width: 600px) {
-      font-size: 28px;
+      font-size: 18px;
     }
   }
   .about__content__description {
@@ -85,12 +85,12 @@
     margin-bottom: 50px;
 
     @media (max-width: 1500px) {
-      font-size: 16px;
+      font-size: 14px;
       max-width: 100%;
     }
 
     @media (max-width: 600px) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 

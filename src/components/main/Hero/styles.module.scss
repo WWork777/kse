@@ -71,7 +71,7 @@
     font-weight: 600;
   }
 
-  button {
+  a {
     padding: 14px 32px;
     font-size: 20px;
     font-weight: 600;
@@ -102,16 +102,40 @@
   }
 
   span {
-    font-size: 400px;
+    font-size: 300px;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.9);
 
-    @media (max-width: 1760px) {
-      font-size: 300px;
+    @media (max-width: 1869px) {
+      font-size: 260px;
     }
 
-    @media (max-width: 1360px) {
+    @media (max-width: 1620px) {
       font-size: 200px;
+    }
+
+    @media (max-width: 1250px) {
+      font-size: 150px;
+    }
+
+    @media (max-width: 950px) {
+      font-size: 120px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 100px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 80px;
+    }
+
+    @media (max-width: 520px) {
+      font-size: 60px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 56px;
     }
   }
 }
@@ -133,7 +157,7 @@
       line-height: 1.4;
     }
 
-    button {
+    a {
       width: 50%;
       font-size: 18px;
       padding: 14px 0;
@@ -142,11 +166,6 @@
 
   .bottomText {
     bottom: 10px;
-
-    span {
-      font-size: 120px;
-      white-space: nowrap;
-    }
   }
 }
 
@@ -158,19 +177,11 @@
   .content p {
     font-size: 22px;
   }
-
-  .bottomText span {
-    font-size: 90px;
-  }
 }
 
 @media (max-width: 400px) {
   .content p {
     font-size: 18px;
-  }
-
-  .bottomText span {
-    font-size: 70px;
   }
 }
 
@@ -189,7 +200,7 @@
     animation-delay: 0.7s;
   }
 
-  button {
+  a {
     opacity: 0;
     animation: fadeUpButton 1s ease forwards;
     animation-delay: 1s;

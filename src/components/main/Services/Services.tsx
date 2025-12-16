@@ -8,12 +8,12 @@ export default function Services() {
         <div className={styles.services__item}>
           <div className={styles.services__item__header}>
             <span>01</span>
-            <h3>CAR WASH</h3>
+            <h3>ПОЛИРОВКА СТЕКЛА</h3>
           </div>
 
           <Image
             src={"/images/services/service2.jpg"}
-            alt="Service One"
+            alt="Полировка автомобильного стекла"
             width={803}
             height={240}
           />
@@ -21,12 +21,12 @@ export default function Services() {
         <div className={styles.services__item}>
           <div className={styles.services__item__header}>
             <span>02</span>
-            <h3>ENGINE DIAGNOSTICS</h3>
+            <h3>ВОССТАНОВЛЕНИЕ ФАР</h3>
           </div>
 
           <Image
             src={"/images/services/service1.jpg"}
-            alt="Service One"
+            alt="Восстановление автомобильных фар"
             width={803}
             height={240}
           />

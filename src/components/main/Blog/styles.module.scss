@@ -29,7 +29,7 @@
 .blogHeaderH2 {
   font-size: 56px;
   font-weight: 700;
-  max-width: 600px;
+  max-width: 650px;
 
   @media (max-width: 768px) {
     font-size: 32px;
@@ -42,29 +42,24 @@
   margin: 0 auto;
   display: flex;
   gap: 30px;
-  flex-wrap: wrap; // на случай, если карточки переходят на следующую строку
+  flex-wrap: wrap;
 }
 
-.blogCard {
+.blogCardLink {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: calc(25% - 22.5px); // 4 карточки в ряд с учетом gap
   transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
 
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.05);
+  &:hover {
+    .blogCard {
+      img {
+        transform: scale(1.05);
+      }
     }
-  }
-
-  span {
-    display: block;
   }
 
   // сдвиг нечетных карточек выше (по желанию можно оставить ноль)
@@ -73,15 +68,33 @@
   }
 }
 
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  span {
+    display: block;
+  }
+}
+
 // адаптив
 @media (max-width: 1200px) {
-  .blogCard {
+  .blogCardLink {
     width: calc(50% - 15px);
   }
 }
 
 @media (max-width: 768px) {
-  .blogCard {
+  .blogCardLink {
     width: 100%;
   }
 }
@@ -98,6 +111,7 @@
   font-weight: 600;
   text-transform: uppercase;
   font-family: Poppins, sans-serif;
+  transition: color 0.3s ease;
 }
 
 .blogCardSpanDate {

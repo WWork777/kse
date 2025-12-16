@@ -4,13 +4,8 @@
   top: 0;
   left: 0;
   z-index: 1000;
-
-  &.scrolled {
-    background-color: rgba(0, 0, 0, 0.459); // при скролле
-    backdrop-filter: blur(10px);
-  }
-
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.342);
+  backdrop-filter: blur(10px);
 
   .phoneNumber {
     color: #ffffff;

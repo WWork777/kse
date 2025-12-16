@@ -6,41 +6,41 @@ export default function Transform() {
     <section className={styles.transformSection}>
       <div className={styles.transform}>
         <h2 className={styles.transform__title}>
-          Transforming your car care experience
+          Превращаем ваше авто в идеал прозрачности
         </h2>
         <span className={styles.transform__subtitle}>
-          We deliver top-notch services for you
+          Профессиональный подход к восстановлению и защите стёкол
         </span>
         <div className={styles.transform__items}>
           <div className={styles.transform__item}>
             <Image
-              src="/images/transform/1.jpg"
-              alt="Transform"
-              width={581}
-              height={730}
+              src="/images/transform/2.JPEG"
+              alt="Полировка стекла"
+              width={1920}
+              height={1080}
             />
-            <h3>Suspension setup</h3>
-            <span>Vehicle Customization</span>
+            <h3>Полировка стекла</h3>
+            <span>Удаление мелких царапин и потёртостей</span>
           </div>
           <div className={styles.transform__item}>
             <Image
-              src="/images/transform/2.jpg"
-              alt="Transform"
-              width={581}
-              height={730}
+              src="/images/transform/3.JPEG"
+              alt="Шлифовка стекла"
+              width={1920}
+              height={1080}
             />
-            <h3>Suspension setup</h3>
-            <span>Vehicle Customization</span>
+            <h3>Шлифовка стекла</h3>
+            <span>Устранение глубоких повреждений</span>
           </div>
           <div className={styles.transform__item}>
             <Image
               src="/images/transform/3.jpg"
-              alt="Transform"
+              alt="Восстановление фар"
               width={581}
               height={730}
             />
-            <h3>Suspension setup</h3>
-            <span>Vehicle Customization</span>
+            <h3>Восстановление фар</h3>
+            <span>Возвращение прозрачности и яркости</span>
           </div>
         </div>
       </div>
