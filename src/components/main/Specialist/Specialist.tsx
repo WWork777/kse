@@ -60,7 +60,7 @@ export default function Contacts() {
 
         <div className={styles.contactsImage}>
           <img
-            src="/images/specialist/2.jpg"
+            src="/images/specialist/2.JPG"
             alt="Наша студия полировки"
             width={500}
             height={500}
