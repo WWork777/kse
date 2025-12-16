@@ -16,7 +16,7 @@ export default function About() {
         <div className={styles.about__content}>
           <span className={styles.about__content__span}>О нас</span>
           <h2 className={styles.about__content__title}>
-            К.С,Е, — студия профессиональной полировки автомобильных стёкол, где
+            К.С.Е. — студия профессиональной полировки автомобильных стёкол, где
             каждая деталь работает на вашу безопасность, комфорт и внешний вид
             автомобиля.
           </h2>

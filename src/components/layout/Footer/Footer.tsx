@@ -1,12 +1,13 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container_top}>
         <div className={styles.item}>
-          <h3>К.С.Е.</h3>
+          <Image src="/logo.png" width={75} height={50} alt="kse logo" />
           <p className={styles.description}>
             Студия профессиональной полировки автомобильных стёкол.
             Восстановление прозрачности, устранение царапин и защита вашего авто
