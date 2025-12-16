@@ -7,28 +7,28 @@ const blogPosts = [
     slug: "polish-signs",
     title: "5 признаков того, что вашему авто нужна полировка стекла",
     tag: "Советы",
-    date: "23 мая 2024",
+    date: "16 декабря 2025",
     image: "/images/blog/1.jpg",
   },
   {
     slug: "hydrophobic-coating",
     title: "Как работает антидождь: гидрофобное покрытие для стекол",
     tag: "Технологии",
-    date: "15 мая 2024",
+    date: "16 декабря 2025",
     image: "/images/blog/2.jpg",
   },
   {
     slug: "headlight-restoration",
     title: "Почему мутные фары опасны и как их восстановить",
     tag: "Безопасность",
-    date: "8 мая 2024",
+    date: "16 декабря 2025",
     image: "/images/blog/3.jpg",
   },
   {
     slug: "polish-vs-replacement",
     title: "Полировка vs замена: когда выгоднее восстановить стекло",
     tag: "Сравнение",
-    date: "1 мая 2024",
+    date: "16 декабря 2025",
     image: "/images/blog/4.jpg",
   },
 ];
@@ -53,8 +53,8 @@ export default function Blog() {
               <Image
                 src={post.image} // Используем динамическое изображение
                 alt={post.title}
-                width={500}
-                height={500}
+                width={1920}
+                height={1080}
               />
               <span className={styles.blogCardSpanTag}>{post.tag}</span>
               <span className={styles.blogCardSpanTitle}>{post.title}</span>

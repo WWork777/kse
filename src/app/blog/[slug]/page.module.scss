@@ -75,7 +75,6 @@
 
 .heroImage {
   margin-bottom: 40px;
-  border-radius: 12px;
   overflow: hidden;
 
   img {
@@ -101,8 +100,9 @@
   }
 
   .headingParagraph {
-    font-weight: 700;
-    font-size: 20px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
     margin: 32px 0 16px;
     color: #000;
 
