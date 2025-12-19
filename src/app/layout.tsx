@@ -21,29 +21,8 @@ const bebasNeue = localFont({
 
 export const metadata = {
   icons: {
-    icon: [
-      { rel: 'icon', type: 'image/x-icon', url: '/favicon/favicon.ico' },
-      { rel: 'icon', type: 'image/svg+xml', url: '/favicon/favicon.svg' },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '96x96',
-        url: '/favicon/favicon-96x96.png',
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '192x192',
-        url: '/favicon/web-app-manifest-192x192.png',
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '512x512',
-        url: '/favicon/web-app-manifest-512x512.png',
-      },
-    ],
-    shortcut: '/favicon/favicon.ico',
+    icon: [{ rel: 'icon', type: 'image/svg+xml', url: '/favicon/favicon.svg' }],
+    shortcut: '/favicon/favicon.svg',
     apple: '/favicon/apple-touch-icon.png',
   },
   manifest: '/manifest.json',

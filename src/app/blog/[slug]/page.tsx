@@ -118,14 +118,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     icons: {
       icon: [
         { rel: 'icon', type: 'image/svg+xml', url: '/favicon/favicon.svg' },
-        {
-          rel: 'icon',
-          type: 'image/png',
-          sizes: '96x96',
-          url: '/favicon/favicon-96x96.png',
-        },
       ],
-      shortcut: '/favicon/favicon.ico',
+      shortcut: '/favicon/favicon.svg',
       apple: '/favicon/apple-touch-icon.png',
     },
   };
