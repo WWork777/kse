@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import About from "@/components/main/About/About";
-import Blog from "@/components/main/Blog/Blog";
-import Hero from "@/components/main/Hero/Hero";
-import Services from "@/components/main/Services/Services";
-import ServicesSecond from "@/components/main/ServicesSecond/ServicesSecond";
-import Specialist from "@/components/main/Specialist/Specialist";
-import Transform from "@/components/main/Transform/Transform";
+import type { Metadata } from 'next';
+import About from '@/components/main/About/About';
+import Blog from '@/components/main/Blog/Blog';
+import Hero from '@/components/main/Hero/Hero';
+import Services from '@/components/main/Services/Services';
+import ServicesSecond from '@/components/main/ServicesSecond/ServicesSecond';
+import Specialist from '@/components/main/Specialist/Specialist';
+import Transform from '@/components/main/Transform/Transform';
 
 // Базовый URL сайта
-const baseUrl = "https://полировка-кемерово.рф";
+const baseUrl = 'https://полировка-кемерово.рф';
 
 export const metadata: Metadata = {
-  title: "Профессиональная полировка автомобильных стекол и фар | К.С.Е.",
+  title: 'Профессиональная полировка автомобильных стекол и фар | К.С.Е.',
   description:
-    "Студия полировки автомобильных стекол в Москве. Устраняем царапины, восстанавливаем прозрачность, наносим антидождь. Гарантия качества. Работаем с 2015 года.",
+    'Студия полировки автомобильных стекол в Кемерово. Устраняем царапины, восстанавливаем прозрачность, наносим антидождь. Гарантия качества. Работаем с 2015 года.',
 
   // Каноническая ссылка
   alternates: {
@@ -21,41 +21,41 @@ export const metadata: Metadata = {
   },
 
   keywords: [
-    "полировка стекла автомобиля",
-    "восстановление фар",
-    "антидождь на стекло",
-    "удаление царапин со стекла",
-    "шлифовка лобового стекла",
-    "гидрофобное покрытие",
-    "полировка автостекол Москва",
-    "профессиональная полировка стекол",
-    "ремонт стекла без замены",
-    "восстановление прозрачности фар",
+    'полировка стекла автомобиля',
+    'восстановление фар',
+    'антидождь на стекло',
+    'удаление царапин со стекла',
+    'шлифовка лобового стекла',
+    'гидрофобное покрытие',
+    'полировка автостекол Кемерово',
+    'профессиональная полировка стекол',
+    'ремонт стекла без замены',
+    'восстановление прозрачности фар',
   ],
 
   openGraph: {
-    title: "К.С.Е. | Профессиональная полировка автомобильных стекол и фар",
+    title: 'К.С.Е. | Профессиональная полировка автомобильных стекол и фар',
     description:
-      "Устраняем царапины, восстанавливаем прозрачность стекол и фар без замены. Гарантия качества. Москва.",
-    type: "website",
+      'Устраняем царапины, восстанавливаем прозрачность стекол и фар без замены. Гарантия качества. Кемерово.',
+    type: 'website',
     url: baseUrl,
-    siteName: "К.С.Е. Студия полировки",
+    siteName: 'К.С.Е. Студия полировки',
     images: [
       {
         url: `${baseUrl}/images/og-main.jpg`, // Создайте это изображение 1200x630px
         width: 1200,
         height: 630,
-        alt: "К.С.Е. - Профессиональная полировка автомобильных стекол",
+        alt: 'К.С.Е. - Профессиональная полировка автомобильных стекол',
       },
     ],
-    locale: "ru_RU",
+    locale: 'ru_RU',
   },
 
   twitter: {
-    card: "summary_large_image",
-    title: "К.С.Е. | Профессиональная полировка автомобильных стекол",
+    card: 'summary_large_image',
+    title: 'К.С.Е. | Профессиональная полировка автомобильных стекол',
     description:
-      "Устраняем царапины, восстанавливаем прозрачность стекол и фар без замены",
+      'Устраняем царапины, восстанавливаем прозрачность стекол и фар без замены',
     images: [`${baseUrl}/images/og-main.jpg`],
   },
 
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
 
@@ -80,9 +80,9 @@ export const metadata: Metadata = {
   },
 
   // Дополнительные метатеги
-  authors: [{ name: "К.С.Е. Студия полировки" }],
-  creator: "К.С.Е.",
-  publisher: "К.С.Е. Студия полировки",
+  authors: [{ name: 'К.С.Е. Студия полировки' }],
+  creator: 'К.С.Е.',
+  publisher: 'К.С.Е. Студия полировки',
 
   // Форматирование для мобильных
   formatDetection: {
@@ -94,82 +94,82 @@ export const metadata: Metadata = {
   },
 
   // Viewport настройки
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
 
   // Apple specific
   appleWebApp: {
-    title: "К.С.Е.",
-    statusBarStyle: "black-translucent",
+    title: 'К.С.Е.',
+    statusBarStyle: 'black-translucent',
   },
 
   // Manifest
-  manifest: "/manifest.json",
+  manifest: '/manifest.json',
 };
 
 // Структурированные данные для главной страницы
 const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": `${baseUrl}/#organization`,
-  name: "К.С.Е. Студия полировки автомобильных стекол",
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `${baseUrl}/#organization`,
+  name: 'К.С.Е. Студия полировки автомобильных стекол',
   description:
-    "Профессиональная полировка и восстановление автомобильных стекол и фар в Москве",
+    'Профессиональная полировка и восстановление автомобильных стекол и фар в Кемерово',
   url: baseUrl,
   logo: `${baseUrl}/logo.png`,
   image: `${baseUrl}/images/og-main.jpg`,
-  telephone: "+7 (923) 523-44-23",
-  email: "kse-polishglass@yandex.ru",
+  telephone: '+7 (923) 523-44-23',
+  email: 'kse-polishglass@yandex.ru',
   address: {
-    "@type": "PostalAddress",
-    streetAddress: "ул. Терешковой, 41/3",
-    addressLocality: "Кемерово",
-    postalCode: "650000",
-    addressCountry: "RU",
+    '@type': 'PostalAddress',
+    streetAddress: 'ул. Терешковой, 41/3',
+    addressLocality: 'Кемерово',
+    postalCode: '650000',
+    addressCountry: 'RU',
   },
   geo: {
-    "@type": "GeoCoordinates",
-    latitude: "55.355198",
-    longitude: "86.086847",
+    '@type': 'GeoCoordinates',
+    latitude: '55.355198',
+    longitude: '86.086847',
   },
-  openingHours: "Mo-Fr 09:00-21:00, Sa-Su 10:00-20:00",
-  priceRange: "₽₽",
+  openingHours: 'Mo-Fr 09:00-21:00, Sa-Su 10:00-20:00',
+  priceRange: '₽₽',
   sameAs: [
     // "https://vk.com/kse_polish",
     // "https://instagram.com/kse_polish",
     // "https://youtube.com/@kse_polish",
   ],
   areaServed: {
-    "@type": "City",
-    name: "Кемерово",
+    '@type': 'City',
+    name: 'Кемерово',
   },
   hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Услуги полировки стекол",
+    '@type': 'OfferCatalog',
+    name: 'Услуги полировки стекол',
     itemListElement: [
       {
-        "@type": "Offer",
+        '@type': 'Offer',
         itemOffered: {
-          "@type": "Service",
-          name: "Полировка стекла",
+          '@type': 'Service',
+          name: 'Полировка стекла',
           description:
-            "Удаление мелких царапин и потёртостей с автомобильного стекла",
+            'Удаление мелких царапин и потёртостей с автомобильного стекла',
         },
       },
       {
-        "@type": "Offer",
+        '@type': 'Offer',
         itemOffered: {
-          "@type": "Service",
-          name: "Восстановление фар",
+          '@type': 'Service',
+          name: 'Восстановление фар',
           description:
-            "Полировка и восстановление прозрачности автомобильных фар",
+            'Полировка и восстановление прозрачности автомобильных фар',
         },
       },
       {
-        "@type": "Offer",
+        '@type': 'Offer',
         itemOffered: {
-          "@type": "Service",
-          name: "Нанесение антидождя",
-          description: "Гидрофобное покрытие для защиты стекла от воды",
+          '@type': 'Service',
+          name: 'Нанесение антидождя',
+          description: 'Гидрофобное покрытие для защиты стекла от воды',
         },
       },
     ],
@@ -181,7 +181,7 @@ export default function Home() {
     <>
       {/* Структурированные данные для SEO */}
       <script
-        type="application/ld+json"
+        type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 

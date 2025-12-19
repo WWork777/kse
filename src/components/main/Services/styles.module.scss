@@ -30,7 +30,8 @@
   img {
     width: 100%;
     max-width: 803px;
-    height: auto;
+    height: 240px;
+    object-fit: cover;
     transition: transform 0.5s ease, filter 0.5s ease;
 
     &:hover {

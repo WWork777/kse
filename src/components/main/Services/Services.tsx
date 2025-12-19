@@ -1,5 +1,5 @@
-import styles from "./styles.module.scss";
-import Image from "next/image";
+import styles from './styles.module.scss';
+import Image from 'next/image';
 
 export default function Services() {
   return (
@@ -12,8 +12,8 @@ export default function Services() {
           </div>
 
           <Image
-            src={"/images/services/service2.jpg"}
-            alt="Полировка автомобильного стекла"
+            src={'/images/services/service3.png'}
+            alt='Полировка автомобильного стекла'
             width={803}
             height={240}
           />
@@ -25,8 +25,8 @@ export default function Services() {
           </div>
 
           <Image
-            src={"/images/services/service1.jpg"}
-            alt="Восстановление автомобильных фар"
+            src={'/images/services/service1.jpg'}
+            alt='Восстановление автомобильных фар'
             width={803}
             height={240}
           />

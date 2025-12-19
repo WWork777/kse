@@ -1,5 +1,5 @@
-import styles from "./styles.module.scss";
-import Image from "next/image";
+import styles from './styles.module.scss';
+import BeforeAfterSlider from './BeforeAfterSlider';
 
 export default function Transform() {
   return (
@@ -13,9 +13,11 @@ export default function Transform() {
         </span>
         <div className={styles.transform__items}>
           <div className={styles.transform__item}>
-            <Image
-              src="/images/transform/2.JPEG"
-              alt="Полировка стекла"
+            <BeforeAfterSlider
+              beforeImage='/images/transform/before-polirovka.JPG'
+              afterImage='/images/transform/after-polirovka.png'
+              beforeAlt='До полировки стекла'
+              afterAlt='После полировки стекла'
               width={1920}
               height={1080}
             />
@@ -23,9 +25,11 @@ export default function Transform() {
             <span>Удаление мелких царапин и потёртостей</span>
           </div>
           <div className={styles.transform__item}>
-            <Image
-              src="/images/transform/3.JPEG"
-              alt="Шлифовка стекла"
+            <BeforeAfterSlider
+              beforeImage='/images/transform/before-shlifovka.JPG'
+              afterImage='/images/transform/after-shlifovka.JPG'
+              beforeAlt='До шлифовки стекла'
+              afterAlt='После шлифовки стекла'
               width={1920}
               height={1080}
             />
@@ -33,11 +37,13 @@ export default function Transform() {
             <span>Устранение глубоких повреждений</span>
           </div>
           <div className={styles.transform__item}>
-            <Image
-              src="/images/transform/3.jpg"
-              alt="Восстановление фар"
-              width={581}
-              height={730}
+            <BeforeAfterSlider
+              beforeImage='/images/transform/before-vosstanovlenie.png'
+              afterImage='/images/transform/after-vosstanovlenie.png'
+              beforeAlt='До восстановления фар'
+              afterAlt='После восстановления фар'
+              width={1920}
+              height={1080}
             />
             <h3>Восстановление фар</h3>
             <span>Возвращение прозрачности и яркости</span>
