@@ -1,8 +1,8 @@
-import { blogPosts } from "../data";
-import styles from "./page.module.scss";
-import Image from "next/image";
-import Link from "next/link";
-import type { Metadata } from "next";
+import { blogPosts } from '../data';
+import styles from './page.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 // Генерируем статические параметры для SSG
 export async function generateStaticParams() {
@@ -17,13 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts[slug];
 
   // Базовый URL вашего сайта (замените на ваш реальный домен)
-  const baseUrl = "https://полировка-кемерово.рф";
+  const baseUrl = 'https://полировка-кемерово.рф';
   const canonicalUrl = `https://полировка-кемерово.рф/blog/${slug}`;
 
   if (!post) {
     return {
-      title: "Статья не найдена | К.С.Е. - Полировка стекол",
-      description: "Запрошенная статья не существует или была удалена.",
+      title: 'Статья не найдена | К.С.Е. - Полировка стекол',
+      description: 'Запрошенная статья не существует или была удалена.',
       alternates: {
         canonical: canonicalUrl,
       },
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const fullDescription =
     post.description.length > 160
-      ? post.description.substring(0, 157) + "..."
+      ? post.description.substring(0, 157) + '...'
       : post.description;
 
   return {
@@ -54,26 +54,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // },
 
     keywords: [
-      "полировка стекла",
-      "автостекло",
-      "ремонт стекла",
-      "восстановление фар",
-      "антидождь",
-      "гидрофобное покрытие",
-      "царапины на стекле",
-      ...post.tag.toLowerCase().split(" "),
+      'полировка стекла',
+      'автостекло',
+      'ремонт стекла',
+      'восстановление фар',
+      'антидождь',
+      'гидрофобное покрытие',
+      'царапины на стекле',
+      ...post.tag.toLowerCase().split(' '),
     ],
 
     openGraph: {
       title: post.title,
       description: fullDescription,
-      type: "article",
+      type: 'article',
       publishedTime: post.date,
-      authors: ["К.С.Е. Студия полировки"],
+      authors: ['К.С.Е. Студия полировки'],
       url: canonicalUrl, // Добавляем URL в Open Graph
       images: [
         {
-          url: post.image.startsWith("/")
+          url: post.image.startsWith('/')
             ? `${baseUrl}${post.image}`
             : post.image,
           width: 1200,
@@ -84,11 +84,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
 
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title: post.title,
       description: fullDescription,
       images: [
-        post.image.startsWith("/") ? `${baseUrl}${post.image}` : post.image,
+        post.image.startsWith('/') ? `${baseUrl}${post.image}` : post.image,
       ],
     },
 
@@ -98,9 +98,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       googleBot: {
         index: true,
         follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
     },
 
@@ -112,13 +112,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
 
     // Для мобильных устройств
-    viewport: "width=device-width, initial-scale=1",
+    viewport: 'width=device-width, initial-scale=1',
 
     // Иконки
     icons: {
-      icon: "/favicon.ico",
-      shortcut: "/favicon-16x16.png",
-      apple: "/apple-touch-icon.png",
+      icon: [
+        { rel: 'icon', type: 'image/svg+xml', url: '/favicon/favicon.svg' },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '96x96',
+          url: '/favicon/favicon-96x96.png',
+        },
+      ],
+      shortcut: '/favicon/favicon.ico',
+      apple: '/favicon/apple-touch-icon.png',
     },
   };
 }
@@ -138,7 +146,7 @@ export default async function BlogPostPage({ params }: Props) {
       <div className={styles.notFound}>
         <h1>Статья не найдена</h1>
         <p>Запрошенная статья не существует или была удалена.</p>
-        <Link href="/blog" className={styles.backLink}>
+        <Link href='/blog' className={styles.backLink}>
           ← Вернуться к списку статей
         </Link>
       </div>
@@ -147,29 +155,29 @@ export default async function BlogPostPage({ params }: Props) {
 
   // Создаем структурированные данные для SEO
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
+    '@context': 'https://schema.org',
+    '@type': 'Article',
     headline: post.title,
     description: post.description,
     image: post.image,
     datePublished: post.date,
     dateModified: post.date,
     author: {
-      "@type": "Organization",
-      name: "К.С.Е. Студия полировки",
-      url: "https://полировка-кемерово.рф",
+      '@type': 'Organization',
+      name: 'К.С.Е. Студия полировки',
+      url: 'https://полировка-кемерово.рф',
     },
     publisher: {
-      "@type": "Organization",
-      name: "К.С.Е.",
+      '@type': 'Organization',
+      name: 'К.С.Е.',
       logo: {
-        "@type": "ImageObject",
-        url: "https://полировка-кемерово.рф/logo.png",
+        '@type': 'ImageObject',
+        url: 'https://полировка-кемерово.рф/logo.png',
       },
     },
     mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://полировка-кемерово.рф/blog/${post.slug}`,
+      '@type': 'WebPage',
+      '@id': `https://полировка-кемерово.рф/blog/${post.slug}`,
     },
   };
 
@@ -177,7 +185,7 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       {/* Структурированные данные для поисковых систем */}
       <script
-        type="application/ld+json"
+        type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
