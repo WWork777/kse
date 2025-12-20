@@ -49,7 +49,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="https://t.me/Fizik_Sergey"
+                href="https://t.me/Sergey_glass_polishing"
                 onClick={() => setMenuOpen(false)}
               >
                 Оставить заявку

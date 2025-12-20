@@ -25,12 +25,12 @@ export default function Contacts() {
             <div className={styles.contactItem}>
               <span className={styles.contactLabel}>Telegram:</span>
               <a
-                href="https://t.me/kse_glass_polishing"
+                href="https://t.me/Sergey_glass_polishing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.contactValue}
               >
-                @kse_glass_polishing
+                @Sergey_glass_polishing
               </a>
             </div>
 

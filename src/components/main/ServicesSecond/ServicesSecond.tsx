@@ -44,7 +44,7 @@ export default function ServicesSecond() {
   // Функция для открытия Telegram
   const openTelegram = () => {
     // Замените на ваш реальный Telegram username или ссылку
-    const telegramUrl = "https://t.me/Fizik_Sergey";
+    const telegramUrl = "https://t.me/Sergey_glass_polishing";
 
     // Можно добавить предзаполненное сообщение
     // const message = encodeURIComponent("Здравствуйте! Хочу записаться на услугу:");

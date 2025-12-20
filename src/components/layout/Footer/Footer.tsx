@@ -35,7 +35,7 @@ export default function Footer() {
           <div className={styles.socials}>
             {/* Добавьте иконки соцсетей здесь */}
             <Link href="mailto:kse-polishglass@yandex.ru">Email</Link>
-            <Link href="https://t.me/kse_glass_polishing">Telegram</Link>
+            <Link href="https://t.me/Sergey_glass_polishing">Telegram</Link>
             <Link href="https://vk.com/kse_glass_polishing">VK</Link>
           </div>
         </div>
