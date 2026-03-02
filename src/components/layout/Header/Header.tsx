@@ -83,9 +83,9 @@ export default function Header() {
 
         <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
           <div className={styles.mobileContent}>
-            <div className={styles.mobileHeader}>
-              <h2>autoclean.</h2>
-            </div>
+            <Link href="/" onClick={() => setMenuOpen(false)}>
+              <Image src="/logo.png" alt="kse logo" width={75} height={50} />
+            </Link>
 
             <nav className={styles.mobileNav}>
               <ul>
