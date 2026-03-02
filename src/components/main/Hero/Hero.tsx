@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className={styles.heroSection}>
       <div className={styles.hero}>
-        <Image src="/images/hero/hero-01.JPG" alt="Hero Image" fill priority />
+        <Image src="/images/hero/1.JPG" alt="Hero Image" fill priority />
 
         <div className={styles.content}>
           <p>
