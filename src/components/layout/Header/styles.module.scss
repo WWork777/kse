@@ -166,6 +166,7 @@
       padding: 120px 5% 60px;
       max-width: 500px;
       margin: 0 auto;
+      align-items: center;
     }
 
     .mobileHeader {
@@ -185,6 +186,11 @@
 
     .mobileNav {
       flex-grow: 1;
+      margin-top: 50px;
+
+      @media (max-width: 380px) {
+        margin-top: 25px;
+      }
 
       ul {
         list-style: none;
@@ -350,7 +356,7 @@
 
     .mobileMenu {
       .mobileContent {
-        padding: 100px 20px 40px;
+        padding: 80px 20px 40px;
       }
 
       .mobileHeader h2 {
