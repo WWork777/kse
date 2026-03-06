@@ -43,6 +43,11 @@ export default function Header() {
               </a>
             </li>
             <li>
+              <Link href="/remont-stekol" onClick={() => setMenuOpen(false)}>
+                Ремонт стекол
+              </Link>
+            </li>
+            <li>
               <a href="/#about" onClick={() => setMenuOpen(false)}>
                 О нас
               </a>
@@ -98,6 +103,11 @@ export default function Header() {
                   <a href="/#services" onClick={() => setMenuOpen(false)}>
                     Услуги
                   </a>
+                </li>
+                <li>
+                  <Link href="/remont-stekol" onClick={() => setMenuOpen(false)}>
+                    Ремонт стекол
+                  </Link>
                 </li>
                 <li>
                   <a href="/#about" onClick={() => setMenuOpen(false)}>

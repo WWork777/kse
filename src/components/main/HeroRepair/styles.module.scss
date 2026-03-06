@@ -1,0 +1,231 @@
+.heroSection {
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    height: 0.5px;
+    background: #ffffff21;
+    z-index: 10;
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-70%);
+  z-index: 2;
+  max-width: 420px;
+  color: #fff;
+
+  span {
+    color: #03bfff;
+  }
+
+  p {
+    font-size: 34px;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  a {
+    padding: 14px 32px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #03bfff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+
+    &:hover {
+      background: #0490be;
+    }
+  }
+}
+
+.bottomText {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+
+  @media (max-width: 1360px) {
+    bottom: -20px;
+  }
+
+  span {
+    font-size: 300px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+
+    @media (max-width: 1869px) {
+      font-size: 260px;
+    }
+
+    @media (max-width: 1620px) {
+      font-size: 200px;
+    }
+
+    @media (max-width: 1250px) {
+      font-size: 150px;
+    }
+
+    @media (max-width: 950px) {
+      font-size: 120px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 100px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 80px;
+    }
+
+    @media (max-width: 520px) {
+      font-size: 60px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 56px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .content {
+    top: auto;
+    bottom: 100px;
+    left: 3%;
+    max-width: 100%;
+    text-align: left;
+
+    p {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    a {
+      width: 70%;
+      font-size: 18px;
+      padding: 14px 20px;
+    }
+  }
+
+  .bottomText {
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    bottom: 50px;
+  }
+
+  .content p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content p {
+    font-size: 18px;
+  }
+}
+
+.content {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.5s;
+  transform: translateY(-70%);
+
+  p {
+    opacity: 0;
+    animation: fadeUpText 1s ease forwards;
+    animation-delay: 0.7s;
+  }
+
+  a {
+    opacity: 0;
+    animation: fadeUpButton 1s ease forwards;
+    animation-delay: 1s;
+  }
+}
+
+.bottomText span {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-70% + 30px));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-70%);
+  }
+}
+
+@keyframes fadeUpText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpButton {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
