@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 
@@ -69,8 +68,6 @@ export default function ServicesSecondRepair() {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const openTelegram = () => {
     const telegramUrl = "https://t.me/Sergey_glass_polishing";
     window.open(telegramUrl, "_blank");
@@ -88,26 +85,23 @@ export default function ServicesSecondRepair() {
           </div>
         </div>
         <div className={styles.servicesSecond__content}>
-          <div className={styles.servicesSecond__content__item}>
-            {services.map((service, index) => (
-              <div key={index} className={styles.serviceItem}>
-                <div className={styles.serviceHeader}>
-                  <span
-                    className={`${styles.serviceTitle} ${
-                      activeIndex === index ? styles.active : ""
-                    }`}
-                    onClick={() => setActiveIndex(index)}
-                  >
-                    {service.title}
-                  </span>
-                </div>
-
-                <div
-                  className={`${styles.serviceDescription} ${
-                    activeIndex === index ? styles.active : ""
-                  }`}
-                >
-                  <p>{service.description}</p>
+          {services.map((service, index) => (
+            <div key={index} className={styles.serviceCard}>
+              {/* <div className={styles.imageWrapper}>
+                <Image
+                  src={images[index % images.length]}
+                  width={850}
+                  height={550}
+                  alt={service.title}
+                  className={styles.serviceImage}
+                />
+              </div> */}
+              <div className={styles.cardContent}>
+                <h3 className={styles.serviceTitle}>{service.title}</h3>
+                <p className={styles.serviceDescription}>
+                  {service.description}
+                </p>
+                <div className={styles.cardFooter}>
                   <span className={styles.price}>{service.price}</span>
                   <button
                     className={styles.serviceButton}
@@ -117,35 +111,11 @@ export default function ServicesSecondRepair() {
                     Записаться
                   </button>
                 </div>
-
-                <div className={styles.image_mobile}>
-                  {activeIndex === index && (
-                    <Image
-                      src={images[index % images.length]}
-                      width={1920}
-                      height={1080}
-                      alt={service.title}
-                    />
-                  )}
-                </div>
               </div>
-            ))}
-          </div>
-
-          <div className={styles.servicesSecond__content__image}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src={images[activeIndex % images.length]}
-                width={850}
-                height={550}
-                alt="Services Image"
-                className={styles.image_desktop}
-              />
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
-

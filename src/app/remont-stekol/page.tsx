@@ -4,6 +4,7 @@ import ServicesRepair from '@/components/main/ServicesRepair/ServicesRepair';
 import ServicesSecondRepair from '@/components/main/ServicesSecondRepair/ServicesSecondRepair';
 import AboutRepair from '@/components/main/AboutRepair/AboutRepair';
 import TransformRepair from '@/components/main/TransformRepair/TransformRepair';
+import ProcessRepair from '@/components/main/ProccessRepair/ProcessRepair';
 import Specialist from '@/components/main/Specialist/Specialist';
 
 // Базовый URL сайта
@@ -188,10 +189,12 @@ export default function RepairPage() {
       />
 
       <HeroRepair />
-      <ServicesRepair />
-      <ServicesSecondRepair />
-      <AboutRepair />
+      {/* <ServicesRepair /> */}
       <TransformRepair />
+      <ServicesSecondRepair />
+      <ProcessRepair />
+      <AboutRepair />
+      
       <Specialist />
     </>
   );

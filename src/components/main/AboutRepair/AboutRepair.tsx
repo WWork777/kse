@@ -7,7 +7,7 @@ export default function AboutRepair() {
       <div className={styles.about}>
         <div className={styles.about__image}>
           <Image
-            src={"/images/about/1.JPG"}
+            src={"/images/about/repair.webp"}
             width={620}
             height={720}
             alt="О ремонте стекол"
@@ -23,7 +23,7 @@ export default function AboutRepair() {
           </p>
           <div className={styles.about__content__items}>
             <div className={styles.about__content__item}>
-              <span className={styles.about__content__item__number}>👉</span>
+              <span className={styles.about__content__item__number}><a href="tel:+7 (923) 523-44-23">+7 (923) 523-44-23</a></span>
               <span className={styles.about__content__item__text}>
                 Ремонт скола сегодня стоит в разы дешевле, чем замена стекла завтра
               </span>

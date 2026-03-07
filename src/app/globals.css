@@ -7,6 +7,10 @@ body {
 body {
   font-family: "bebasNeue";
 }
+body::selection {
+  background-color: #03bfff; /* Цвет фона выделения (например, желтый) */
+  color: #000000;            /* Цвет самого текста при выделении (например, черный) */
+}
 
 * {
   box-sizing: border-box;
