@@ -25,7 +25,7 @@ export default function TransformRepair() {
           </div>
           <div className={styles.transform__item}>
             <div className={styles.reasonBox}>
-              <h3>Может не пройти техосмотр</h3>
+              <h3>Можете не пройти техосмотр</h3>
               <span>Повреждения на лобовом стекле могут стать причиной отказа в техосмотре</span>
             </div>
           </div>
