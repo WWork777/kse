@@ -3,6 +3,7 @@ import styles from './page.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import ReactMarkdown from 'react-markdown';
 
 // Генерируем статические параметры для SSG
 export async function generateStaticParams() {
@@ -130,6 +131,15 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('ru-RU', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+};
+
 export default async function BlogPostPage({ params }: Props) {
   // Дожидаемся распаковки params
   const { slug } = await params;
@@ -189,7 +199,7 @@ export default async function BlogPostPage({ params }: Props) {
             <header className={styles.articleHeader}>
               <div className={styles.meta}>
                 <span className={styles.tag}>{post.tag}</span>
-                <span className={styles.date}>{post.date}</span>
+                <span className={styles.date}>{formatDate(post.date)}</span>
                 <span className={styles.readTime}>{post.readTime}</span>
               </div>
 
@@ -208,24 +218,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
 
             <div className={styles.content}>
-              {post.fullContent.map((paragraph, index) => {
-                // Проверяем, является ли параграф заголовком (начинается с цифры)
-                const isHeading =
-                  /^\d+\./.test(paragraph) || /^[А-Я].*:$/.test(paragraph);
-
-                return (
-                  <p
-                    key={index}
-                    className={
-                      isHeading
-                        ? styles.headingParagraph
-                        : styles.regularParagraph
-                    }
-                  >
-                    {paragraph}
-                  </p>
-                );
-              })}
+              <ReactMarkdown>{post.fullContent}</ReactMarkdown>
             </div>
 
             <footer className={styles.articleFooter}>
@@ -266,7 +259,7 @@ export default async function BlogPostPage({ params }: Props) {
                         {relatedPost.title}
                       </h3>
                       <span className={styles.relatedDate}>
-                        {relatedPost.date}
+                        {formatDate(relatedPost.date)}
                       </span>
                     </div>
                   </Link>

@@ -33,14 +33,14 @@ export default function Header() {
         <nav className={styles.desktopNav}>
           <ul>
             <li>
-              <a href="/" onClick={() => setMenuOpen(false)}>
+              <Link href="/" onClick={() => setMenuOpen(false)}>
                 Главная
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#services" onClick={() => setMenuOpen(false)}>
+              <Link href="/#services" onClick={() => setMenuOpen(false)}>
                 Услуги
-              </a>
+              </Link>
             </li>
             <li>
               <Link href="/remont-stekol" onClick={() => setMenuOpen(false)}>
@@ -48,9 +48,14 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <a href="/#about" onClick={() => setMenuOpen(false)}>
+              <Link href="/blog" onClick={() => setMenuOpen(false)}>
+                Блог
+              </Link>
+            </li>
+            <li>
+              <Link href="/#about" onClick={() => setMenuOpen(false)}>
                 О нас
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -95,14 +100,14 @@ export default function Header() {
             <nav className={styles.mobileNav}>
               <ul>
                 <li>
-                  <a href="/" onClick={() => setMenuOpen(false)}>
+                  <Link href="/" onClick={() => setMenuOpen(false)}>
                     Главная
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#services" onClick={() => setMenuOpen(false)}>
+                  <Link href="/#services" onClick={() => setMenuOpen(false)}>
                     Услуги
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="/remont-stekol" onClick={() => setMenuOpen(false)}>
@@ -110,9 +115,14 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <a href="/#about" onClick={() => setMenuOpen(false)}>
+                  <Link href="/blog" onClick={() => setMenuOpen(false)}>
+                    Блог
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#about" onClick={() => setMenuOpen(false)}>
                     О нас
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -123,9 +133,9 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href="/#contacts" onClick={() => setMenuOpen(false)}>
+                  <Link href="/#contacts" onClick={() => setMenuOpen(false)}>
                     Контакты
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <a href="tel:+7 (923) 523-44-23" className={styles.phoneNumber}>

@@ -24,7 +24,7 @@
 }
 
 .article {
-  max-width: 900px;
+  // max-width: 900px;
   margin: 0 auto 80px;
 }
 
@@ -74,13 +74,20 @@
 }
 
 .heroImage {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   overflow: hidden;
+  // border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 
   img {
     width: 100%;
-    height: auto;
+    height: 500px;
+    object-fit: cover;
     display: block;
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
   }
 }
 
@@ -90,25 +97,78 @@
   color: #333;
   margin-bottom: 60px;
 
-  .regularParagraph {
-    font-family: Poppins, sans-serif;
-    margin-bottom: 24px;
-
+  // General elements
+  p {
+    font-family: "Poppins", sans-serif !important;
+    margin-bottom: 1.5em;
     &:last-child {
       margin-bottom: 0;
     }
   }
 
-  .headingParagraph {
-    font-family: Poppins, sans-serif;
+  // Headings
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: 600;
-    font-size: 18px;
-    margin: 32px 0 16px;
     color: #000;
+    line-height: 1;
+    margin: 2em 0 1em;
+  }
 
-    &:first-of-type {
-      margin-top: 0;
+  h2 {
+    font-size: 32px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.3em;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  // Lists
+  ul,
+  ol {
+    font-family: "Poppins", sans-serif !important;
+    margin: 0 0 1.5em 1.5em;
+    padding: 0;
+    list-style-position: outside;
+  }
+
+  li {
+    font-family: "Poppins", sans-serif !important;
+    margin-bottom: 0.75em;
+  }
+
+  // Links
+  a {
+    font-family: "Poppins", sans-serif !important;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 1px solid #007bff33;
+
+    &:hover {
+      color: #0056b3;
+      border-bottom-color: #0056b3;
     }
+  }
+
+  // Emphasis
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  em,
+  i {
+    font-style: italic;
   }
 }
 
