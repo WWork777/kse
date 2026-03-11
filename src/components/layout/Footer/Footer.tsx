@@ -27,6 +27,7 @@ export default function Footer() {
           <Link href="/">Главная</Link>
           <Link href="/#services">Услуги</Link>
           <Link href="/remont-stekol">Ремонт стекол</Link>
+          <Link href="/blog">Ремонт стекол</Link>
           <Link href="/#about">О нас</Link>
           <Link href="https://t.me/Fizik_Sergey">Оставить заявку</Link>
           <Link href="/#contacts">Контакты</Link>

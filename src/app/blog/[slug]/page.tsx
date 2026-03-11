@@ -195,6 +195,14 @@ export default async function BlogPostPage({ params }: Props) {
 
       <main className={styles.blogPost}>
         <div className={styles.container}>
+          <nav aria-label="breadcrumb" className={styles.breadcrumbs}>
+            <Link href="/">Главная</Link>
+            <span className={styles.separator}>/</span>
+            <Link href="/blog">Блог</Link>
+            <span className={styles.separator}>/</span>
+            <span className={styles.currentPage}>{post.title}</span>
+          </nav>
+
           <article className={styles.article}>
             <header className={styles.articleHeader}>
               <div className={styles.meta}>

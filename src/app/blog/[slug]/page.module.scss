@@ -9,6 +9,46 @@
   padding: 0 20px;
 }
 
+.breadcrumbs {
+  margin-bottom: 2rem;
+  font-size: 16px;
+  color: #555;
+
+  a {
+    color: #03bfff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: #0056b3;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: #0056b3;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .separator {
+    margin: 0 0.5rem;
+    color: #aaa;
+  }
+
+  .currentPage {
+    color: #333;
+  }
+}
+
 .backLink {
   display: inline-block;
   margin-bottom: 30px;
