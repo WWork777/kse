@@ -22,6 +22,32 @@ export default function Contacts() {
               </span>
             </div>
 
+            {/* Новые ссылки Max */}
+            <div className={styles.contactItem}>
+              <span className={styles.contactLabel}>Канал Max:</span>
+              <a
+                href="https://max.ru/id420208560534_biz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.contactValue}
+              >
+                Наш канал
+              </a>
+            </div>
+
+            <div className={styles.contactItem}>
+              <span className={styles.contactLabel}>Написать в Max:</span>
+              <a
+                href="https://max.ru/u/f9LHodD0cOI3ewZ_yl3NqhfOQKuGTOY17LxAIPADNx3fjL_iU7EGHxChywc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.contactValue}
+              >
+                Личные сообщения
+              </a>
+            </div>
+            {/* ------------------ */}
+
             <div className={styles.contactItem}>
               <span className={styles.contactLabel}>Telegram:</span>
               <a
