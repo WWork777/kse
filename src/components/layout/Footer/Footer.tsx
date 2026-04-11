@@ -39,11 +39,14 @@ export default function Footer() {
             <Link href="mailto:kse-polishglass@yandex.ru">Email</Link>
             <Link href="https://t.me/Sergey_glass_polishing">Telegram</Link>
             <Link href="https://vk.com/kse_glass_polishing">VK</Link>
+            <Link href="https://max.ru/u/f9LHodD0cOI3ewZ_yl3NqhfOQKuGTOY17LxAIPADNx3fjL_iU7EGHxChywc">
+              MAX
+            </Link>
           </div>
         </div>
       </div>
       <div className={styles.container_bottom}>
-        <span>© 2025 К.С.Е. Все права защищены.</span>
+        <span>© 2026 К.С.Е. Все права защищены.</span>
         <span>Разработка сайта — SAKNE</span>
       </div>
     </footer>
