@@ -3,6 +3,7 @@ import './globals.css';
 import localFont from 'next/font/local';
 import Header from '@/components/layout/Header/Header';
 import YandexMetrika from '@/components/YandexMetrika/YandexMEtrika';
+import NewServiceModal from '@/components/NewServiceModal/NewServiceModal';
 
 const bebasNeue = localFont({
   src: [
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <NewServiceModal />
         <YandexMetrika />
         <Footer />
       </body>
