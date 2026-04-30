@@ -1,32 +1,32 @@
-import Footer from '@/components/layout/Footer/Footer';
-import './globals.css';
-import localFont from 'next/font/local';
-import Header from '@/components/layout/Header/Header';
-import YandexMetrika from '@/components/YandexMetrika/YandexMEtrika';
-import NewServiceModal from '@/components/NewServiceModal/NewServiceModal';
+import Footer from "@/components/layout/Footer/Footer";
+import "./globals.css";
+import localFont from "next/font/local";
+import Header from "@/components/layout/Header/Header";
+import YandexMetrika from "@/components/YandexMetrika/YandexMEtrika";
+import NewServiceModal from "@/components/NewServiceModal/NewServiceModal";
 
 const bebasNeue = localFont({
   src: [
     {
-      path: './fonts/Bebas-Neue-Regular.ttf',
-      weight: '400',
-      style: 'normal',
+      path: "./fonts/Bebas-Neue-Regular.ttf",
+      weight: "400",
+      style: "normal",
     },
     {
-      path: './fonts/Bebas-Neue-Bold.ttf',
-      weight: '500',
-      style: 'normal',
+      path: "./fonts/Bebas-Neue-Bold.ttf",
+      weight: "500",
+      style: "normal",
     },
   ],
 });
 
 export const metadata = {
   icons: {
-    icon: [{ rel: 'icon', type: 'image/svg+xml', url: '/favicon/favicon.svg' }],
-    shortcut: '/favicon/favicon.svg',
-    apple: '/favicon/apple-touch-icon.png',
+    icon: [{ rel: "icon", type: "image/svg+xml", url: "/favicon/favicon.svg" }],
+    shortcut: "/favicon/favicon.svg",
+    apple: "/favicon/apple-touch-icon.png",
   },
-  manifest: '/manifest.json',
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
         <Header />
         {children}

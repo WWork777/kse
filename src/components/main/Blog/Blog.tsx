@@ -5,17 +5,17 @@ import Link from "next/link";
 const blogPosts = [
   {
     slug: "polish-signs",
-    title: "5 признаков того, что вашему авто нужна полировка стекла",
-    tag: "Советы",
-    date: "16 декабря 2025",
-    image: "/images/blog/1.jpg",
+    title: "Почему ночью слепят фары встречных машин: 7 скрытых причин",
+    tag: "Безопасность",
+    date: "29 апреля 2026",
+    image: "/images/blog/10.jpg",
   },
   {
     slug: "hydrophobic-coating",
-    title: "Как работает антидождь: гидрофобное покрытие для стекол",
-    tag: "Технологии",
-    date: "16 декабря 2025",
-    image: "/images/blog/2.jpg",
+    title: "Почему в дождь стало плохо видно дорогу даже с новыми дворниками",
+    tag: "Советы",
+    date: "29 апреля 2026",
+    image: "/images/blog/11.jpg",
   },
   {
     slug: "headlight-restoration",
