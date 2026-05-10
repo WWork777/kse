@@ -4,6 +4,21 @@ import Link from "next/link";
 
 const blogPosts = [
   {
+    slug: "dangerous-windshield-signs",
+    title: "Как понять, что ваше лобовое стекло уже опасно для вождения",
+    tag: "Безопасность",
+    date: "11 мая 2026",
+    image: "/images/blog/12.webp",
+  },
+  {
+    slug: "driver-eye-fatigue-worn-glass",
+    title:
+      "Усталость за рулем: как затертое лобовое стекло незаметно перегружает зрение",
+    tag: "Советы",
+    date: "11 мая 2026",
+    image: "/images/blog/13.webp",
+  },
+  {
     slug: "polish-signs",
     title: "Почему ночью слепят фары встречных машин: 7 скрытых причин",
     tag: "Безопасность",
@@ -16,20 +31,6 @@ const blogPosts = [
     tag: "Советы",
     date: "29 апреля 2026",
     image: "/images/blog/11.jpg",
-  },
-  {
-    slug: "headlight-restoration",
-    title: "Почему мутные фары опасны и как их восстановить",
-    tag: "Безопасность",
-    date: "16 декабря 2025",
-    image: "/images/blog/3.jpg",
-  },
-  {
-    slug: "polish-vs-replacement",
-    title: "Полировка vs замена: когда выгоднее восстановить стекло",
-    tag: "Сравнение",
-    date: "16 декабря 2025",
-    image: "/images/blog/4.jpg",
   },
 ];
 
