@@ -3,6 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const blogPosts = [
+    {
+    slug: "scratches-polishing-guide",
+    title: "Какие царапины на стекле можно убрать полировкой, а какие нет?",
+    tag: "Советы",
+    date: "14 мая 2026",
+    image: "/images/blog/14.jpg",
+  },
   {
     slug: "dangerous-windshield-signs",
     title: "Как понять, что ваше лобовое стекло уже опасно для вождения",
