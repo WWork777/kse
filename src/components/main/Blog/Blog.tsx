@@ -3,6 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const blogPosts = [
+      {
+    slug: "wiper-scratches-polishing",
+    title: "Можно ли убрать царапины от дворников с помощью полировки?",
+    tag: "Советы",
+    date: "20 мая 2026",
+    image: "/images/blog/15.JPEG",
+  },
     {
     slug: "scratches-polishing-guide",
     title: "Какие царапины на стекле можно убрать полировкой, а какие нет?",
