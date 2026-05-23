@@ -6,6 +6,8 @@ import Services from '@/components/main/Services/Services';
 import ServicesSecond from '@/components/main/ServicesSecond/ServicesSecond';
 import Specialist from '@/components/main/Specialist/Specialist';
 import Transform from '@/components/main/Transform/Transform';
+import YandexMap from "@/components/YandexMap/YandexMap";
+import Reviews from "@/components/Reviews/Reviews";
 
 // Базовый URL сайта
 const baseUrl = 'https://полировка-кемерово.рф';
@@ -191,6 +193,8 @@ export default function Home() {
       <About />
       <Transform />
       <Specialist />
+      <YandexMap />
+      <Reviews />
       <Blog />
     </>
   );
