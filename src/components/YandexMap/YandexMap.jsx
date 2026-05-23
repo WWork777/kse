@@ -1,5 +1,6 @@
 'use client'
 import { useCallback, useEffect, useRef, useState } from 'react'
+import "./YandexMap.scss";
 
 // Глобальный флаг, чтобы API загружался один раз на страницу
 if (typeof window !== 'undefined') {
@@ -171,6 +172,8 @@ const YMap = ({ center = [55.324422, 86.149496], points = [
   }
 
   return (
+    <>
+    <h2 className="titleMap">Наше местоположение</h2>
     <div
       ref={mapRef}
       className='ymap map w-full h-full min-h-[400px] rounded-2xl overflow-hidden shadow-lg'
@@ -181,6 +184,7 @@ const YMap = ({ center = [55.324422, 86.149496], points = [
         backgroundColor: '#f0f0f0',
       }}
     />
+    </>
   )
 }
 
